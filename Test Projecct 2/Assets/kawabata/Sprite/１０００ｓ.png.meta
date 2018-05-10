@@ -1,0 +1,214 @@
+fileFormatVersion: 2
+guid: 301b84c28beb57140ab6f5a9073712c0
+timeCreated: 1525835453
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: "\uFF11\uFF10\uFF10\uFF10\uFF53_0"
+    21300002: "\uFF11\uFF10\uFF10\uFF10\uFF53_1"
+    21300004: "\uFF11\uFF10\uFF10\uFF10\uFF53_2"
+    21300006: "\uFF11\uFF10\uFF10\uFF10\uFF53_3"
+    21300008: "\uFF11\uFF10\uFF10\uFF10\uFF53_4"
+    21300010: "\uFF11\uFF10\uFF10\uFF10\uFF53_5"
+    21300012: "\uFF11\uFF10\uFF10\uFF10\uFF53_6"
+    21300014: "\uFF11\uFF10\uFF10\uFF10\uFF53_8"
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "\uFF11\uFF10\uFF10\uFF10\uFF53_0"
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 291
+        width: 503
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "\uFF11\uFF10\uFF10\uFF10\uFF53_1"
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 301
+        width: 504
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "\uFF11\uFF10\uFF10\uFF10\uFF53_2"
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 312
+        width: 503
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "\uFF11\uFF10\uFF10\uFF10\uFF53_3"
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 321
+        width: 499
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "\uFF11\uFF10\uFF10\uFF10\uFF53_4"
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 74
+        width: 503
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "\uFF11\uFF10\uFF10\uFF10\uFF53_5"
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 70
+        width: 426
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "\uFF11\uFF10\uFF10\uFF10\uFF53_6"
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 79
+        width: 370
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "\uFF11\uFF10\uFF10\uFF10\uFF53_8"
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 79
+        width: 229
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
