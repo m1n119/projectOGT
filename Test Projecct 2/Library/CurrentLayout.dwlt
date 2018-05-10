@@ -110,7 +110,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 9533
+  controlID: 2814
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -131,10 +131,10 @@ MonoBehaviour:
     y: 0
     width: 875
     height: 929
-  m_MinSize: {x: 202, y: 421}
-  m_MaxSize: {x: 4002, y: 8021}
+  m_MinSize: {x: 202, y: 442}
+  m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 9534
+  controlID: 2775
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 9423
+  controlID: 2728
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -509,13 +509,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/TestScene
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Users\2160035.MAETEL\Desktop\Test Projecct
+  m_LastProjectPath: C:\Users\2160035.MAETEL\Desktop\TGS\projectOGT\Test Projecct
+    2
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 4c270000
-    m_LastClickedID: 10060
-    m_ExpandedIDs: 00000000462700007a2700008827000000ca9a3bffffff7f
+    m_SelectedIDs: 5a270000
+    m_LastClickedID: 10074
+    m_ExpandedIDs: 0000000054270000fa2700001c2800004228000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -543,7 +544,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000462700007a2700008827000000ca9a3bffffff7f
+    m_ExpandedIDs: 0000000054270000fa2700001c2800004228000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -570,7 +571,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: b4aa000070c10000681b0200b03a0000c829000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -626,9 +627,9 @@ MonoBehaviour:
     height: 297
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: cc280000
-    m_LastClickedID: 10444
-    m_ExpandedIDs: 4eafffffa6fbffff0000000044280000
+    m_SelectedIDs: 22290000
+    m_LastClickedID: 10530
+    m_ExpandedIDs: 9cfbffff0000000092290000be290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
