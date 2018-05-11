@@ -103,7 +103,7 @@ public class PlayerMove : MonoBehaviour {
         Speed = 0;
         while (true)
         {
-            shake.SetShake(0.5f);
+            shake.SetShake(0.3f);
             Speed++;
             if (Speed > MaxSpeed) Speed = MaxSpeed;
             if (Input.GetButtonUp("Move"))
@@ -114,8 +114,8 @@ public class PlayerMove : MonoBehaviour {
             yield return null;
         }
         State = (int)state.Move;
-        shake.SetShake(5.0f);
-        yield return new WaitForSeconds(0.2f);
+        shake.SetShake(3.0f);
+        yield return new WaitForSeconds(0.15f);
         ChargeFlg = false;
         shake.SetShake(0.1f);
 

@@ -56,11 +56,14 @@
      <Compile Include="Assets\Camera\CameraScript.cs" />
      <Compile Include="Assets\Camera\ShakeCamera.cs" />
      <Compile Include="Assets\kawabata\Script\CameraPlayer.cs" />
+     <Compile Include="Assets\kawabata\Script\IceWallState.cs" />
      <Compile Include="Assets\kawabata\Script\Lage.cs" />
      <Compile Include="Assets\kawabata\Script\Move.cs" />
      <Compile Include="Assets\kawabata\Script\Small.cs" />
      <Compile Include="Assets\kawabata\Script\Temperature.cs" />
+     <Compile Include="Assets\kawabata\Script\TemperatureNum.cs" />
      <Compile Include="Assets\Shima\Script\Shima.cs" />
+     <Compile Include="Assets\Title\SceneChange.cs" />
      <Compile Include="Assets\UI\Log\Script\Log.cs" />
      <Compile Include="Assets\UI\Telop\Script\Spawner.cs" />
      <Compile Include="Assets\UI\Telop\Script\Telop.cs" />
