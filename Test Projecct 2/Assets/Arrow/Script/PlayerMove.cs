@@ -10,8 +10,10 @@ public class PlayerMove : MonoBehaviour {
     //減速(摩擦的なやつ)
     public float 減速 = 1.0f;
     public bool  ChargeFlg = false;     //チャージしている間true
-    private Vector3 dir; 
+    private Vector3 dir = new Vector3( 0, 1, 0 ); 
     private float Speed = 0f;
+
+    private ShakeCamera shake;
 
     private int State;
     private enum state : int
@@ -26,8 +28,8 @@ public class PlayerMove : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-      
 
+        shake = GameObject.FindWithTag("MainCamera").GetComponent<ShakeCamera>();
 	}
 	
 	// Update is called once per frame
@@ -46,7 +48,7 @@ public class PlayerMove : MonoBehaviour {
         {
             case (int)state.Initialize:
 
-                
+                shake.Stop();
                 //move = 80;
                 if (Input.GetButtonDown("Move"))
                 {
@@ -57,6 +59,7 @@ public class PlayerMove : MonoBehaviour {
 
             case (int)state.Move:
 
+                //移動中
                 if (!ChargeFlg)
                 {
                     //レイ
@@ -67,13 +70,19 @@ public class PlayerMove : MonoBehaviour {
                         hit.collider.gameObject.GetComponent<Shima>().Fire();
                     }
 
-                    GetComponent<Rigidbody2D>().velocity = dir * Speed;
-                    Speed -= 減速;
-
+                    //移動
+                    {
+                        GetComponent<Rigidbody2D>().velocity = dir * Speed;
+                        Speed -= 減速;
+                    }
+           
                 }
+
+                //とまったとき
                 if (Speed < 0) State = (int)state.Initialize;
 
-                if (Input.GetButtonDown("Move") )
+                //移動中にチャージ(キャラは止まる)
+                if (!ChargeFlg &&Input.GetButtonDown("Move") )
                 {
                     GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
                     Speed = 0f;
@@ -94,13 +103,22 @@ public class PlayerMove : MonoBehaviour {
         Speed = 0;
         while (true)
         {
+            shake.SetShake(0.5f);
             Speed++;
             if (Speed > MaxSpeed) Speed = MaxSpeed;
-            if (Input.GetButtonUp("Move")) break;
+            if (Input.GetButtonUp("Move"))
+            {
+                break;
+            }
+            
             yield return null;
         }
         State = (int)state.Move;
+        shake.SetShake(5.0f);
+        yield return new WaitForSeconds(0.2f);
         ChargeFlg = false;
+        shake.SetShake(0.1f);
+
         yield return null;
 
     }

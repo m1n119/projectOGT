@@ -53,14 +53,14 @@
   <ItemGroup>
      <Compile Include="Assets\Arrow\Script\Arrow.cs" />
      <Compile Include="Assets\Arrow\Script\PlayerMove.cs" />
+     <Compile Include="Assets\Camera\CameraScript.cs" />
+     <Compile Include="Assets\Camera\ShakeCamera.cs" />
      <Compile Include="Assets\kawabata\Script\CameraPlayer.cs" />
      <Compile Include="Assets\kawabata\Script\Lage.cs" />
      <Compile Include="Assets\kawabata\Script\Move.cs" />
      <Compile Include="Assets\kawabata\Script\Small.cs" />
      <Compile Include="Assets\kawabata\Script\Temperature.cs" />
      <Compile Include="Assets\Shima\Script\Shima.cs" />
-     <Compile Include="Assets\TestScene\CameraScript.cs" />
-     <Compile Include="Assets\TestScene\ShakeCamera.cs" />
      <Compile Include="Assets\UI\Log\Script\Log.cs" />
      <Compile Include="Assets\UI\Telop\Script\Spawner.cs" />
      <Compile Include="Assets\UI\Telop\Script\Telop.cs" />
