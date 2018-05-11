@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class CameraScript : MonoBehaviour {
 
+    private ShakeCamera sc;
     private Transform target;
-    public Vector3 offset = Vector3.zero;
+
    	// Use this for initialization
 	void Start () {
         target = GameObject.FindWithTag("Player").transform;
+        sc = GetComponent<ShakeCamera>();
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        transform.position = target.transform.position + offset;
+        transform.position = target.transform.position + sc.Shake();
+        if (Input.GetKeyDown(KeyCode.Y)) sc.SetShake(target.transform.position, 3.0f);
     }
 
 }

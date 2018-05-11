@@ -3,68 +3,66 @@ using System.Collections;
 
 public class ShakeCamera : MonoBehaviour
 {
-    public float setShakeTIme; // 持続振動時間
-    private float lifeTime;
+    private GameObject Player;
     private Vector3 savePosition;
     private Vector3 offset;
+    private float Power = 0.0f;
+
+    //
     private float lowRangeX;
     private float maxRangeX;
     private float lowRangeY;
     private float maxRangeY;
-    private float Zjiku;
+
+    //
     static public bool ShakeFlg = false;
-    public bool GetShakeFlg() { return ShakeFlg; }
-    private float timer;
+   
+    public Vector3 Shake() { return offset;  }
+    public void SetShake( Vector3 pos, float p)
+    {
+        StartCoroutine( ShakeItOff(pos, p) );
+    }
 
     void Start()
     {
-        if (setShakeTIme <= 0.0f)
-            setShakeTIme = 0.2f;
-        lifeTime = 0.0f;
+        Player = GameObject.FindWithTag("Player");
+        offset = Player.transform.position - transform.position;
         ShakeFlg = false;
-        offset = GetComponent<CameraScript>().offset;
+        
     }
 
     void Update()
     {
-        if (lifeTime <= 0.0f)
+        if (!ShakeFlg)
         {
-            timer = 0;
-            offset.z = -1;
-            GetComponent<CameraScript>().offset = offset;
-            lifeTime = 0.0f;
+            offset.z = -1;    
             ShakeFlg = false;
         }
-
-        if (lifeTime > 0.0f)
+        else
         {
-            timer++;
             ShakeFlg = true;
-            lifeTime -= Time.deltaTime;
             float x_val = Random.Range(lowRangeX, maxRangeX);
             float y_val = Random.Range(lowRangeY, maxRangeY);
-            //transform.position = new Vector3(x_val, y_val, transform.position.z);
-            GetComponent<CameraScript>().offset = new Vector3(x_val, y_val, -1);
-        }
-
-        if (timer > 60)
-        {
-            lifeTime = 0.0f;
-        }
-        if (Input.GetKeyDown("space"))
-        {
-            if (ShakeFlg == false) CatchShake();
+            offset = new Vector3(x_val, y_val, -1);
         }
     }
 
-    public void CatchShake()
+    IEnumerator ShakeItOff( Vector3 pos,float p )
     {
-        if (ShakeFlg == true) return;
-        savePosition = offset;
-        lowRangeY = savePosition.y - 0.1f;
-        maxRangeY = savePosition.y + 0.1f;
-        lowRangeX = savePosition.x - 0.1f;
-        maxRangeX = savePosition.x + 0.1f;
-        lifeTime = setShakeTIme;
+        Power = p;
+        savePosition = pos;
+        ShakeFlg = true;
+        while (true)
+        {
+            lowRangeY = savePosition.y - Power;
+            maxRangeY = savePosition.y + Power;
+            lowRangeX = savePosition.x - Power;
+            maxRangeX = savePosition.x + Power;
+            Power -= 0.1f;
+            if (Power <= 0) break;
+            yield return null;
+        }
+        ShakeFlg = false;
+        yield return null;
     }
 }
