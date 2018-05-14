@@ -27,7 +27,7 @@ public class UIManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
+        PlayerChargeSlider.maxValue = PlayerScript.GetMaxSpeed();
         //ログ
         if (Input.GetKeyDown(KeyCode.O))
         {

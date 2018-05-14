@@ -141,3 +141,4 @@ C:\Users\2160035.MAETEL\Desktop\TGS\projectOGT\Test Projecct 2\Temp\bin\Debug\Un
 C:\Users\2160035.MAETEL\Desktop\TGS\projectOGT\Test Projecct 2\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\2160035.MAETEL\Desktop\TGS\projectOGT\Test Projecct 2\obj\Debug\Assembly-CSharp.dll
 C:\Users\2160035.MAETEL\Desktop\TGS\projectOGT\Test Projecct 2\obj\Debug\Assembly-CSharp.pdb
+C:\Users\2160035.MAETEL\Desktop\TGS\projectOGT\Test Projecct 2\Temp\bin\Debug\XInputDotNetPure.dll

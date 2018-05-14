@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour {
+    //振動
+    public GameObject XInputDotNet;
+    private baibu Baibu;
 
     //スピードの最大値
     public float MaxSpeed = 80.0f;
@@ -19,17 +22,30 @@ public class PlayerMove : MonoBehaviour {
     private enum state : int
     {
         Initialize = 0,
-        Move
+        Move,
+        Charge
     }
   
     public float GetMaxSpeed() { return MaxSpeed; }
     public float GetSpeed() { return Speed; }
 
+    private static bool inst = false;
+    void Awake()
+    {
+        if (!inst)
+        {
+            DontDestroyOnLoad(this.gameObject);
+            inst = true;
+            Debug.Log("Awake: " + this.gameObject);
+        }
+    }
     // Use this for initialization
     void Start ()
     {
 
         shake = GameObject.FindWithTag("MainCamera").GetComponent<ShakeCamera>();
+        Baibu = XInputDotNet.GetComponent<baibu>();
+
 	}
 	
 	// Update is called once per frame
@@ -48,10 +64,17 @@ public class PlayerMove : MonoBehaviour {
         {
             case (int)state.Initialize:
 
+                //滑り止め
+                Baibu.SetPower(0.0f);
+                Speed = 0.0f;
+                GetComponent<Rigidbody2D>().velocity = Vector3.zero;
                 shake.Stop();
-                //move = 80;
+                
+
+                //ボタン入力でチャージ状態にしてからチャージを開始
                 if (Input.GetButtonDown("Move"))
                 {
+                    State = (int)state.Charge;
                     if (!ChargeFlg) StartCoroutine(Charge());
                 }
 
@@ -84,12 +107,25 @@ public class PlayerMove : MonoBehaviour {
                 //移動中にチャージ(キャラは止まる)
                 if (!ChargeFlg &&Input.GetButtonDown("Move") )
                 {
-                    GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
-                    Speed = 0f;
-                    State = (int)state.Initialize;
+                    GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+                    Speed = 0.0f;
+                    State = (int)state.Charge;
                     StartCoroutine(Charge());
                 }
 
+                break;
+
+            case (int)state.Charge:
+
+                //とまったとき
+                if (Speed < 0) State = (int)state.Initialize;
+
+                //チャージ中の処理
+                if (!ChargeFlg && Input.GetButtonDown("Move"))
+                {
+                    Speed = 0f;
+                    StartCoroutine(Charge());
+                }
                 break;
         }
 
@@ -103,22 +139,26 @@ public class PlayerMove : MonoBehaviour {
         Speed = 0;
         while (true)
         {
+            Baibu.SetPower(0.2f);
             shake.SetShake(0.3f);
             Speed++;
             if (Speed > MaxSpeed) Speed = MaxSpeed;
             if (Input.GetButtonUp("Move"))
             {
+                Baibu.SetPower(0);
                 break;
             }
             
             yield return null;
         }
+
+        Baibu.SetPower(1.0f);
         State = (int)state.Move;
         shake.SetShake(3.0f);
         yield return new WaitForSeconds(0.15f);
         ChargeFlg = false;
         shake.SetShake(0.1f);
-
+        Baibu.SetPower(0.03f);
         yield return null;
 
     }

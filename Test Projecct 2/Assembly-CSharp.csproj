@@ -62,12 +62,16 @@
      <Compile Include="Assets\kawabata\Script\Small.cs" />
      <Compile Include="Assets\kawabata\Script\Temperature.cs" />
      <Compile Include="Assets\kawabata\Script\TemperatureNum.cs" />
+     <Compile Include="Assets\Scene\Change\SceneChanger.cs" />
      <Compile Include="Assets\Shima\Script\Shima.cs" />
+     <Compile Include="Assets\Sys\baibu.cs" />
+     <Compile Include="Assets\Sys\singleton.cs" />
      <Compile Include="Assets\Title\SceneChange.cs" />
      <Compile Include="Assets\UI\Log\Script\Log.cs" />
      <Compile Include="Assets\UI\Telop\Script\Spawner.cs" />
      <Compile Include="Assets\UI\Telop\Script\Telop.cs" />
      <Compile Include="Assets\UI\UIManager.cs" />
+     <None Include="Assets\Plugins\XInputDotNet.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -100,6 +104,9 @@
  </Reference>
  <Reference Include="UnityEngine.Purchasing">
  <HintPath>C:/Users/2160035.MAETEL/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
+ </Reference>
+ <Reference Include="XInputDotNetPure">
+ <HintPath>C:/Users/2160035.MAETEL/Desktop/TGS/projectOGT/Test Projecct 2/Assets/Plugins/XInputDotNetPure.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
