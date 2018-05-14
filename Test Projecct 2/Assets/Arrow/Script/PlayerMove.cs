@@ -86,12 +86,9 @@ public class PlayerMove : MonoBehaviour {
                 if (!ChargeFlg)
                 {
                     //レイ
-                    RaycastHit2D hit = Physics2D.Raycast(transform.position, dir * 10, 0.1f);
-                    Debug.DrawRay(transform.position, dir * 4, Color.blue, 1);
-                    if (hit.collider != null && hit.transform.tag == "Shima")
-                    {
-                        hit.collider.gameObject.GetComponent<Shima>().Fire();
-                    }
+                    //RaycastHit2D hit = Physics2D.Raycast(transform.position, dir * 10, 0.1f);
+                    //Debug.DrawRay(transform.position, dir * 4, Color.blue, 1);
+ 
 
                     //移動
                     {
@@ -161,5 +158,20 @@ public class PlayerMove : MonoBehaviour {
         Baibu.SetPower(0.03f);
         yield return null;
 
+    }   
+    void OnTriggerEnter2D(Collider2D c)
+    {
+        if (c.transform.tag == "Small")
+        {
+            if (!c.GetComponent<Small>().SmallFire) {
+
+                c.GetComponent<Small>().SmallFire = true;
+                //shake.ShakeShakeShake(1.0f, 3.0f);
+                Baibu.Play(1.0f, 0.1f);
+            }
+    
+        }
     }
+
+
 }

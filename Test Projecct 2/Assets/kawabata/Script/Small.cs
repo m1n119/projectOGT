@@ -75,7 +75,8 @@ public class Small : MonoBehaviour
             GameObject ef2 = Instantiate(FireEffect, transform.position, Quaternion.identity) as GameObject;
             GameObject ef3 = Instantiate(Fire, transform.position, Quaternion.identity) as GameObject;
 
-            SmallFire = true;
+            //2018/05/14 編集(OGT)
+            // SmallFire = true;
             // 2018/05/10 00:37 追加(OGT)
             LogManager.AddLog(this.name + "が燃えました");
         }
