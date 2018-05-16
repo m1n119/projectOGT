@@ -51,26 +51,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Arrow\Script\Arrow.cs" />
-     <Compile Include="Assets\Arrow\Script\PlayerMove.cs" />
-     <Compile Include="Assets\Camera\CameraScript.cs" />
-     <Compile Include="Assets\Camera\ShakeCamera.cs" />
-     <Compile Include="Assets\kawabata\Script\CameraPlayer.cs" />
-     <Compile Include="Assets\kawabata\Script\IceWallState.cs" />
-     <Compile Include="Assets\kawabata\Script\Lage.cs" />
-     <Compile Include="Assets\kawabata\Script\Move.cs" />
-     <Compile Include="Assets\kawabata\Script\Small.cs" />
-     <Compile Include="Assets\kawabata\Script\Temperature.cs" />
-     <Compile Include="Assets\kawabata\Script\TemperatureNum.cs" />
-     <Compile Include="Assets\Scene\Change\SceneChanger.cs" />
-     <Compile Include="Assets\Shima\Script\Shima.cs" />
+     <Compile Include="Assets\Manager\UIManager.cs" />
+     <Compile Include="Assets\Object\Camera\CameraScript.cs" />
+     <Compile Include="Assets\Object\Camera\ShakeCamera.cs" />
+     <Compile Include="Assets\Object\IceWall\IceWallState.cs" />
+     <Compile Include="Assets\Object\Player\PlayerMove.cs" />
+     <Compile Include="Assets\Object\Tamperature\Temperature.cs" />
+     <Compile Include="Assets\Object\Tamperature\TemperatureNum.cs" />
+     <Compile Include="Assets\Object\中島大島小島\Lage.cs" />
+     <Compile Include="Assets\Object\中島大島小島\Small.cs" />
+     <Compile Include="Assets\Scenes\Change\SceneChanger.cs" />
+     <Compile Include="Assets\Scenes\Title\SceneChange.cs" />
      <Compile Include="Assets\Sys\baibu.cs" />
-     <Compile Include="Assets\Sys\singleton.cs" />
-     <Compile Include="Assets\Title\SceneChange.cs" />
      <Compile Include="Assets\UI\Log\Script\Log.cs" />
      <Compile Include="Assets\UI\Telop\Script\Spawner.cs" />
      <Compile Include="Assets\UI\Telop\Script\Telop.cs" />
-     <Compile Include="Assets\UI\UIManager.cs" />
      <None Include="Assets\Plugins\XInputDotNet.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

@@ -7,6 +7,9 @@ TagManager:
   - GameLog
   - Shima
   - Telop
+  - Small
+  - Large
+  - Wall
   layers:
   - Default
   - TransparentFX
